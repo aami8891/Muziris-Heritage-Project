@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "342566503878",
+    "firebase_url": "https://muziris-logon.firebaseio.com",
+    "project_id": "muziris-logon",
+    "storage_bucket": "muziris-logon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342566503878:android:abfe373614edaa900a1ec7",
+        "android_client_info": {
+          "package_name": "com.example.chmarax.logregform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342566503878-ddria7i51fhkvvgp4nsfcdfs48bhm3mi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAVO1jVYshahTLstZNmmgyrQgJ3IboU8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342566503878-ddria7i51fhkvvgp4nsfcdfs48bhm3mi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
