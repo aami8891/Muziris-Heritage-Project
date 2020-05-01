@@ -1,2 +1,2 @@
-include ':app', 'muzlogreg'
+include 'muzlogreg'
 rootProject.name='Muziris-Heritage-Project'
