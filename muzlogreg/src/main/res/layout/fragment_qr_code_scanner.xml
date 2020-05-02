@@ -12,7 +12,7 @@ tools:context=".QrCodeScannerFragment">
     <SurfaceView
         android:id="@+id/surfaceView"
         android:layout_width="300dp"
-        android:layout_height="500dp"
+        android:layout_height="300dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
@@ -22,16 +22,18 @@ tools:context=".QrCodeScannerFragment">
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-    android:id="@+id/textView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="32dp"
-    android:layout_marginTop="70dp"
-    android:layout_marginEnd="32dp"
-    android:text="Nothing Scanned"
-    android:textSize="30sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/surfaceView" />
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="32dp"
+        android:background="#AE220707"
+        android:text="Nothing Scanned"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surfaceView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,15 @@ package com.example.chmarax.logregform;
 
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -60,24 +64,9 @@ public class QrCodeScannerFragment extends Fragment {
     private void initViews() {
         txtBarcodeValue = v.findViewById(R.id.textView);
         surfaceView = v.findViewById(R.id.surfaceView);
-//        btnAction = v.findViewById(R.id.btn);
 //
-//
-//        btnAction.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-////                if (intentData.length() > 0) {
-////                    if (isEmail)
-////                        startActivity(new Intent(ScannedBarcodeActivity.this, EmailActivity.class).putExtra("email_address", intentData));
-////                    else {
-////                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(intentData)));
-////                    }
-////                }
-//
-//
-//            }
-//        });
+
+
     }
 
     private void initialiseDetectorsAndSources() {
@@ -89,7 +78,7 @@ public class QrCodeScannerFragment extends Fragment {
                 .build();
 
         cameraSource = new CameraSource.Builder(getContext(), barcodeDetector)
-                .setRequestedPreviewSize(1920, 1080)
+                .setRequestedPreviewSize(720, 720)
                 .setAutoFocusEnabled(true) //you should add this feature
                 .build();
 
@@ -151,6 +140,11 @@ public class QrCodeScannerFragment extends Fragment {
                                 intentData = barcodes.valueAt(0).displayValue;
                                 txtBarcodeValue.setText(intentData);
 
+                                MapFragment fragment1 = new MapFragment(intentData,getContext());
+                                FragmentManager fragmentManager = getFragmentManager();
+                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                fragmentTransaction.replace(R.id.container, fragment1);
+                                fragmentTransaction.commit();
                             }
                         }
                     });
@@ -173,3 +167,4 @@ public class QrCodeScannerFragment extends Fragment {
         initialiseDetectorsAndSources();
     }
 }
+
