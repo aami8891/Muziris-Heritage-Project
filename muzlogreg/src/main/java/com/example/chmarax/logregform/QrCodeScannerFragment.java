@@ -2,9 +2,7 @@ package com.example.chmarax.logregform;
 
 
 import android.Manifest;
-import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.core.app.ActivityCompat;
@@ -44,6 +42,8 @@ public class QrCodeScannerFragment extends Fragment {
     Button btnAction;
     String intentData = "";
     boolean isEmail = false;
+    ArtifactJsonFragment fragment1;
+
     public QrCodeScannerFragment() {
         // Required empty public constructor
     }
@@ -139,9 +139,8 @@ public class QrCodeScannerFragment extends Fragment {
 //                                btnAction.setText("LAUNCH URL");
                                 intentData = barcodes.valueAt(0).displayValue;
                                 txtBarcodeValue.setText(intentData);
-
-                                MapFragment fragment1 = new MapFragment(intentData,getContext());
-                                FragmentManager fragmentManager = getFragmentManager();
+                                 fragment1 = new ArtifactJsonFragment(intentData);
+                                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                                 fragmentTransaction.replace(R.id.container, fragment1);
                                 fragmentTransaction.commit();

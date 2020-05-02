@@ -1,9 +1,7 @@
 package com.example.chmarax.logregform;
 
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,26 +10,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.nio.charset.StandardCharsets;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -45,35 +29,50 @@ import okhttp3.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MapFragment extends Fragment {
+public class ArtifactJsonFragment extends Fragment {
     private String k;
     private TextView et;
-    private  Context context;
+    private View v;
     private String mMessage;
-
-    public MapFragment() {
+    private int len;
+    public ArtifactJsonFragment() {
 
         // Required empty public constructor
     }
 
-    public MapFragment(String s, Context context) {
+    public ArtifactJsonFragment(String s) {
         this.k = s;
-        this.context=context;
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_map, container, false);
+         v = inflater.inflate(R.layout.fragment_artifactjson, container,  false);
+
         et = v.findViewById(R.id.textView2);
 
-        try {
-            postRequest();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        et.setText(k);
+
+
+
+                try {
+                    postRequest();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                // Stuff that updates the UI
+
+
+
+//        new Thread(new Runnable() {
+//            public void run() {
+//
+//            }
+//        }).start();
+
+
+      //  et.setText(k);
 
         return v;
     }
@@ -88,8 +87,8 @@ public class MapFragment extends Fragment {
         JSONObject postdata = new JSONObject();
         try {
             postdata.put("qrcode", "100");
-          //  postdata.put("password", "12345");
-        } catch(JSONException e){
+            //  postdata.put("password", "12345");
+        } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
@@ -114,12 +113,45 @@ public class MapFragment extends Fragment {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
 
-                 mMessage = response.body().string();
-                Log.e("xxxxx", mMessage.substring(0,100));
+                mMessage = response.body().string();
+                Log.e("xxxxx", mMessage.substring(0, 100));
+                try {
+                    jsonparsing(mMessage);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+
+
             }
         });
     }
 
+    public void jsonparsing(String message) throws JSONException {
 
+
+       JSONObject obj = new JSONObject(message);
+       String name = obj.getString("mainimg");
+       final String desc = obj.getString("englishtext");
+       Log.e("msggg",name);
+
+       final TextView description =  v.findViewById(R.id.textView2);
+
+     //   description.setText(desc.substring(0,30));
+        setText(description,desc);
+
+
+
+    }
+
+    private void setText(final TextView text,final String value){
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                text.setText(value);
+            }
+        });
+    }
 }
 
