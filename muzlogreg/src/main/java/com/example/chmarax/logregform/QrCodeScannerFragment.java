@@ -2,6 +2,7 @@ package com.example.chmarax.logregform;
 
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -44,7 +45,8 @@ public class QrCodeScannerFragment extends Fragment {
     String intentData = "";
     boolean isEmail = false;
     ArtifactJsonFragment fragment1;
-
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
     public QrCodeScannerFragment() {
         // Required empty public constructor
     }
@@ -55,7 +57,8 @@ public class QrCodeScannerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          v = inflater.inflate(R.layout.fragment_qr_code_scanner, container, false);
-
+         fragmentManager = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
+         fragmentTransaction = fragmentManager.beginTransaction();
         initViews();
 
         return v;
@@ -65,7 +68,8 @@ public class QrCodeScannerFragment extends Fragment {
     private void initViews() {
         txtBarcodeValue = v.findViewById(R.id.textView);
         surfaceView = v.findViewById(R.id.surfaceView);
-//
+
+
 
 
     }
@@ -138,13 +142,14 @@ public class QrCodeScannerFragment extends Fragment {
                             } else {
 //                                isEmail = false;
 //                                btnAction.setText("LAUNCH URL");
-                                intentData = barcodes.valueAt(0).displayValue;
-                                txtBarcodeValue.setText(intentData);
-                                 fragment1 = new ArtifactJsonFragment(intentData);
-                                FragmentManager fragmentManager = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
-                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                                fragmentTransaction.replace(R.id.container, fragment1);
-                                fragmentTransaction.commit();
+
+                                        intentData = barcodes.valueAt(0).displayValue;
+                                        txtBarcodeValue.setText(intentData);
+                                        fragment1 = new ArtifactJsonFragment(intentData);
+                                        fragmentManager.beginTransaction().replace(R.id.container, fragment1).commit();
+
+
+
                             }
                         }
                     });

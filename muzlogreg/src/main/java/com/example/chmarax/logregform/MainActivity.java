@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
-
+        mFragment = new SelectionFragment();
+        fragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
 //        btnLogout.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -51,9 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     switch (item.getItemId()) {
                         case R.id.navigation_home:
+                            mFragment = new HomeFragment();
+                            fragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
                             //         openFragment(HomeFragment.newInstance("", ""));
                             return true;
                         case R.id.navigation_sms:
+                            mFragment = new MapFragment();
+                            fragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
                             //         openFragment(SmsFragment.newInstance("", ""));
                             return true;
                         case R.id.navigation_notifications:
