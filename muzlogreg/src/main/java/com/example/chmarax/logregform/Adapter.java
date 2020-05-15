@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
@@ -22,10 +23,12 @@ public class Adapter extends PagerAdapter {
     private List<Model> models;
     private LayoutInflater layoutInflater;
     private Context context;
+    private View vie;
 
-    public Adapter(List<Model> models, Context context) {
+    public Adapter(List<Model> models, Context context,View vie) {
         this.models = models;
         this.context = context;
+        this.vie = vie;
     }
 
     @Override
@@ -55,7 +58,7 @@ public class Adapter extends PagerAdapter {
      //   String urls = models.get(position).geturlimage();
 
         Glide.with(context)
-                .load(urls)//"https://files.000webhost.com/handler.php?action=download?action=download&path=%2FImages%2Fser.jpg
+                .load(urls)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .skipMemoryCache(true)
                 .into(imageView);
@@ -67,19 +70,23 @@ public class Adapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("param", models.get(position).getTitle());
-                context.startActivity(intent);
+                Toast.makeText(context, "Action", Toast.LENGTH_SHORT).show();
                 // finish();
             }
         });
+
+
 
         container.addView(view, 0);
         return view;
     }
 
     @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View)object);
+    public void destroyItem(@NonNull final ViewGroup container, int position, @NonNull final Object object) {
+
+                container.removeView((View)object);
+                // finish();
     }
+
+
 }

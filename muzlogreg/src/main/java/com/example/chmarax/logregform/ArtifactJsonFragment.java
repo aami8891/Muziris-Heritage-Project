@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.speech.tts.TextToSpeech;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -28,6 +29,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+import com.shivtechs.mediaplayemodule.AudioPlayer;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -41,6 +43,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -50,22 +53,30 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+import static com.shivtechs.mediaplayemodule.AudioPlayer.MODE_PATH;
+import static com.shivtechs.mediaplayemodule.AudioPlayer.MODE_RESOURCE;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ArtifactJsonFragment extends Fragment {
+public class ArtifactJsonFragment extends Fragment implements TextToSpeech.OnInitListener {
     private String k;
     private TextView et;
     private View v;
     private String mMessage,mMessageartifact;
     public String[] images = new String[100];
+    private String stringaudio;
     private int len;
     Context context1,context2;
     Adapter adapter;
     List<Model> models;
     ViewPager viewPager;
     Activity activity1;
+    FloatingActionButton actionButton;
+    TextToSpeech tts;
+    String desc;
+    String st = null;
     private Handler mHandler = new Handler(Looper.getMainLooper());
 
 
@@ -91,14 +102,23 @@ public class ArtifactJsonFragment extends Fragment {
 
         activity1 =getActivity();
         context2=getContext();
+         tts = new TextToSpeech(getContext(), this);
 
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    postRequest();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
-
+            }
+        }).start();
 
         ImageView icon = new ImageView(getContext()); // Create an icon
         icon.setImageDrawable(getResources().getDrawable(R.drawable.media) );
 
-        FloatingActionButton actionButton = new FloatingActionButton.Builder(getActivity())
+         actionButton = new FloatingActionButton.Builder(getActivity())
                 .setContentView(icon)
                 .setPosition(FloatingActionButton.POSITION_RIGHT_CENTER)
                 .build();
@@ -116,10 +136,15 @@ public class ArtifactJsonFragment extends Fragment {
         itemIcon2.setImageDrawable(getResources().getDrawable(R.drawable.video)  );
         SubActionButton button3 = itemBuilder.setContentView(itemIcon2).build();
 
+        ImageView itemIcon3 = new ImageView(getContext());
+        itemIcon2.setImageDrawable(getResources().getDrawable(R.drawable.imag)  );
+        SubActionButton button4 = itemBuilder.setContentView(itemIcon3).build();
+
         final FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(getActivity())
                 .addSubActionView(button1)
                 .addSubActionView(button2)
                 .addSubActionView(button3)
+                .addSubActionView(button4)
 
                 .attachTo(actionButton)
                 .build();
@@ -130,41 +155,26 @@ public class ArtifactJsonFragment extends Fragment {
             public void onClick(View vi) {
                 Toast.makeText(getContext(),"Audio playing",Toast.LENGTH_SHORT).show();
 
-
-                new Thread(new Runnable() {
-                    public void run() {
-                           getMoreImagePostMethod();
-
-                    }
-                }).start();
-
-
-
-//                mHandler.post(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//
-//
-//
-//                    }
-//
-//
-//                });
+                String FILE_PROVIDER_NAME = "com.shivtechs.provider" ;
+                //For playing the audio file from the given path
+                stringaudio = "https://mangoess.000webhostapp.com/MangoFolder/Njandukalude%20Naattil%20Oridavela%20_%20Enthaavo%20Song%20Vid%20-%20128K%20MP3.mp3";
+               AudioPlayer player2 = new AudioPlayer(getActivity(),FILE_PROVIDER_NAME,getActivity().isFinishing(),getActivity().getSupportFragmentManager(),stringaudio,MODE_PATH);
+                //For playing the audio file from the android resource
+           //    AudioPlayer player = new AudioPlayer(getActivity(),getActivity().isFinishing(),getActivity().getSupportFragmentManager(),R.raw.guitar,MODE_RESOURCE);
 
 
                 actionMenu.close(true);
+
             }
-
-
-
-
-
         });
         button2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(),"Text to Speech",Toast.LENGTH_SHORT).show();
+                Log.e("languages",tts.getAvailableLanguages().toString());
+                tts.setPitch(1f);
+                tts.setSpeechRate(1f);
+                tts.speak(st.substring(10,1250), TextToSpeech.QUEUE_FLUSH, null, null);
                 actionMenu.close(true);
             }
 
@@ -186,16 +196,21 @@ public class ArtifactJsonFragment extends Fragment {
 
         });
 
-        new Thread(new Runnable() {
-            public void run() {
-                try {
-                    postRequest();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        button4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Video Files",Toast.LENGTH_SHORT).show();
+                new Thread(new Runnable() {
+                    public void run() {
+                        getMoreImagePostMethod();
 
+                    }
+                }).start();
+                actionMenu.close(true);
             }
-        }).start();
+        });
+
+
 
 
         return v;
@@ -256,7 +271,7 @@ public class ArtifactJsonFragment extends Fragment {
 
        JSONObject obj = new JSONObject(message);
        String name = obj.getString("mainimg");
-       final String desc = obj.getString("englishtext");
+       desc = obj.getString("englishtext");
        Log.e("msggg",name);
 
        final TextView description =  v.findViewById(R.id.textView2);
@@ -295,7 +310,7 @@ public class ArtifactJsonFragment extends Fragment {
 
         ImageView imageView = (ImageView) v.findViewById(R.id.imageView);
         byte[] decode = Base64.decode(value,Base64.DEFAULT);
-        String st = null;
+
         try {
             st = new String (decode,"UTF-8");
         } catch (UnsupportedEncodingException e) {
@@ -339,7 +354,7 @@ public class ArtifactJsonFragment extends Fragment {
 
         JSONObject postdata = new JSONObject();
         try {
-            postdata.put("id", "1201");
+            postdata.put("id", "500");
             //  postdata.put("password", "12345");
         } catch (JSONException e) {
             // TODO Auto-generated catch block
@@ -398,7 +413,15 @@ public class ArtifactJsonFragment extends Fragment {
         });
 
     }
-    public void showthesliderimage(String[] images,int lenth){
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        actionButton.detach();
+        tts.shutdown();
+    }
+
+    public void showthesliderimage(String[] images, int lenth){
 
         Toast.makeText(getContext(), String.valueOf(lenth),Toast.LENGTH_LONG).show();
         models = new ArrayList<>();
@@ -416,11 +439,36 @@ public class ArtifactJsonFragment extends Fragment {
 //        models.add(new Model(R.drawable.brochure, "Sticker", "Sticker is a type of label: a piece of printed paper, plastic, vinyl, or other material with pressure sensitive adhesive on one side"));
 //        models.add(new Model(R.drawable.poster, "Poster", "Poster is any piece of printed paper designed to be attached to a wall or vertical surface."));
 //        models.add(new Model(R.drawable.namecard, "Namecard", "Business cards are cards bearing business information about a company or individual."));
-        adapter = new Adapter(models, getContext());
+        adapter = new Adapter(models, getContext(),v);
         viewPager = v.findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
         viewPager.setPadding(130, 0, 130, 0);
+
+        if( !viewPager.isActivated()) {
+            Toast.makeText(context1, "pager is activated", Toast.LENGTH_SHORT).show();
+        }
+
+
+
     }
 
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+            Locale locale = new Locale("hi_IN");
+            int result = tts.setLanguage(locale);
+
+
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Toast.makeText(getActivity(), "Language not supported", Toast.LENGTH_SHORT).show();
+            } else {
+                //Disable the button if any.
+            }
+
+        } else {
+            Toast.makeText(getActivity(), "Init failed", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
 

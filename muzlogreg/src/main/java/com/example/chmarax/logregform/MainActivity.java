@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.yarolegovich.discretescrollview.sample.weather.WeatherActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                             //         openFragment(HomeFragment.newInstance("", ""));
                             return true;
                         case R.id.navigation_sms:
-                            mFragment = new MapFragment();
+                            mFragment = new WeatherActivity();
                             fragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
                             //         openFragment(SmsFragment.newInstance("", ""));
                             return true;
