@@ -1,0 +1,51 @@
+package com.example.aapplication.mp;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+
+import com.example.aapplication.mp.io.StorageModule;
+
+public class MaterialEditTextPreference extends AbsMaterialTextValuePreference<String> {
+
+    public MaterialEditTextPreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public MaterialEditTextPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    public MaterialEditTextPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
+
+    @Override
+    public String getValue() {
+        return storageModule.getString(key, defaultValue);
+    }
+
+    @Override
+    public void setValue(String value) {
+        storageModule.saveString(key, value);
+        showNewValueIfNeeded(value);
+    }
+
+    @Override
+    public void setStorageModule(StorageModule storageModule) {
+        super.setStorageModule(storageModule);
+        showNewValueIfNeeded(toRepresentation(getValue()));
+    }
+
+    @Override
+    public void onClick(View v) {
+        userInputModule.showEditTextInput(key, getTitle(), getValue(), this);
+    }
+
+    @Override
+    protected CharSequence toRepresentation(String value) {
+        return value;
+    }
+
+
+}

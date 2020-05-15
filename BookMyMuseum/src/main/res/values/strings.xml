@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">A Application</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="card_title_preview">Preview</string>
+    <string name="card_title_credits">Credits</string>
+
+    <string name="preview_title_big_cards">Big cards</string>
+    <string name="preview_title_small_cards">Small cards</string>
+    <string name="preview_title_vertical">Vertical scroll</string>
+
+    <string name="credit_title_taya">Taisiya Yurkiv</string>
+    <string name="credit_title_flaticon">Zlatko Najdenovski, Freepik</string>
+    <string name="credit_title_herriot">Herriottgrace</string>
+    <string name="credit_summary_taya">Sample app design</string>
+    <string name="credit_summary_flaticon">Monument icons from www.flaticon.com</string>
+    <string name="credit_summary_herriot">Shop goods photos from www.herriottgrace.com</string>
+
+    <string name="btn_spot">Spot on map</string>
+    <string name="btn_details">More Details</string>
+    <string name="btn_add">Add To Visit</string>
+    <string name="dialog_seekbar_transition_time">Item transition time in millis</string>
+
+    <string name="msg_no_browser">No app found to open the url</string>
+    <string name="msg_unsupported_op">Unsupported operation</string>
+
+    <string name="pref_key_transition_time" translatable="false">pref_key_transition_time</string>
+
+    <string name="mi_rate_on_github">Rate on GitHub</string>
+    <string name="dsv_ex_msg_dont_set_lm">You should not set LayoutManager on DiscreteScrollView.class instance. Library uses a special one. Just don\'t call the method.</string>
+    <string name="dsv_ex_msg_adapter_wrong_recycler">InfiniteScrollAdapter is supposed to work only with DiscreteScrollView</string>
+    <string name="exc_not_frag_activity_subclass">Context should be subclass of FragmentActivity, for example - AppCompatActivity</string>
+    <string name="exc_no_entries_to_list_provided">You must provide mp_entry_values or mp_entry_descriptions attribute or both in your XML layout!</string>
+    <string name="exc_not_int_default">Please provide integer mp_default_value</string>
+    <string name="channel_alpha">A</string>
+    <string name="channel_red">R</string>
+    <string name="channel_green">G</string>
+    <string name="channel_blue">B</string>
+
+    <string name="channel_hue">H</string>
+    <string name="channel_saturation">S</string>
+    <string name="channel_value">V</string>
+    <string name="channel_lightness">L</string>
+
+    <string name="channel_cyan">C</string>
+    <string name="channel_magenta">M</string>
+    <string name="channel_yellow">Y</string>
+    <string name="channel_black">K</string>
+</resources>

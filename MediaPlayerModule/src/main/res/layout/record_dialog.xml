@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/record_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/bkmus"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/recording_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Playing:"
+        android:textColor="#AEEA00"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recording_label"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <SeekBar
+            android:id="@+id/recording_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.9" />
+
+        <ImageButton
+            android:id="@+id/recording_button"
+            android:layout_width="10dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/circular_button_background"
+            app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

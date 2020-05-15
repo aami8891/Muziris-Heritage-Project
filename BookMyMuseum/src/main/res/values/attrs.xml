@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="chromaColorMode" format="enum">
+        <enum name="RGB" value="0"/>
+        <enum name="HSV" value="1"/>
+        <enum name="ARGB" value="2"/>
+        <enum name="CMYK" value="3"/>
+        <enum name="CMYK255" value="4"/>
+        <enum name="HSL" value="5"/>
+    </attr>
+
+    <attr name="chromaIndicatorMode" format="enum">
+        <enum name="DECIMAL" value="0"/>
+        <enum name="HEX" value="1"/>
+    </attr>
+
+    <attr name="chromaShapePreview" format="enum">
+        <enum name="CIRCLE" value="0"/>
+        <enum name="SQUARE" value="1"/>
+        <enum name="ROUNDED_SQUARE" value="2"/>
+    </attr>
+
+    <declare-styleable name="ChromaPreference">
+        <attr name="chromaInitialColor" format="reference|color"/>
+        <attr name="chromaColorMode" />
+        <attr name="chromaIndicatorMode" />
+        <attr name="chromaShapePreview"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialPreferenceCategory">
+        <attr name="mpc_title" format="string" />
+        <attr name="mpc_title_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AbsMaterialPreference">
+
+        <attr name="mp_icon" format="reference" />
+        <attr name="mp_title" format="string" />
+        <attr name="mp_summary" format="string" />
+
+        <attr name="mp_icon_tint" format="color"/>
+
+        <attr name="mp_key" format="string"/>
+        <attr name="mp_default_value" format="string"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="AbsMaterialTextValuePreference">
+        <attr name="mp_show_value" format="enum">
+            <enum name="notShow" value="0"/>
+            <enum name="onRight" value="1"/>
+            <enum name="onBottom" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AbsMaterialListPreference">
+        <attr name="mp_entry_descriptions" format="reference"/>
+        <attr name="mp_entry_values" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialMultiChoicePreference">
+        <attr name="mp_default_selected" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialSeekBarPreference">
+        <attr name="mp_max_val" format="integer"/>
+        <attr name="mp_min_val" format="integer"/>
+        <attr name="mp_show_val" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialColorPreference">
+        <attr name="mp_initial_color" format="color"/>
+        <attr name="mp_border_color" format="color"/>
+        <attr name="mp_border_width" format="dimension"/>
+        <attr name="mp_indicator_shape" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ColorView">
+        <attr name="mp_cv_border_color" format="color"/>
+        <attr name="mp_cv_color" format="color"/>
+        <attr name="mp_cv_border_width" format="dimension"/>
+        <attr name="mp_cv_shape" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="square" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="DiscreteScrollView">
+        <attr name="dsv_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>
