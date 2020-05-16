@@ -1,2 +1,2 @@
-include 'muzlogreg', ':MediaPlayerModule', ':MuseumBooking', ':library'
+include 'muzlogreg', ':MediaPlayerModule', ':MuseumBooking', ':library', ':Payment', ':GpsModule'
 rootProject.name='Muziris-Heritage-Project'

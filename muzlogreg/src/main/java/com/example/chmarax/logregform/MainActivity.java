@@ -1,12 +1,9 @@
 package com.example.chmarax.logregform;
 
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +13,8 @@ import androidx.fragment.app.FragmentManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import com.razorpay.sampleapp.java.PaymentActivity;
 import com.yarolegovich.discretescrollview.sample.weather.WeatherActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogout;
     private FirebaseAuth firebaseAuth;
     private Fragment mFragment = null;
+    private Fragment mFragment1 = null;
     private FragmentManager fragmentManager = getSupportFragmentManager();
 
     @Override
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation = findViewById(R.id.bottom_navigation);
        // btnLogout = findViewById(R.id.btnLogout);
         firebaseAuth = FirebaseAuth.getInstance();
+
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
         mFragment = new SelectionFragment();
@@ -67,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
                          //   Toast.makeText(getApplicationContext(),"here ",Toast.LENGTH_LONG).show();
                             mFragment = new SelectionFragment();
                             fragmentManager.beginTransaction().replace(R.id.container, mFragment).commit();
+                            return true;
+
+                        case R.id.navigation_payment:
+                            //    openFragment(NotificationFragment.newInstance("", ""));
+                            //   Toast.makeText(getApplicationContext(),"here ",Toast.LENGTH_LONG).show();
+                            Intent i = new Intent(getApplicationContext(), PaymentActivity.class);
+                            startActivity(i);
                             return true;
                     }
                     return false;

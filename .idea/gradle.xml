@@ -11,8 +11,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/GpsModule" />
             <option value="$PROJECT_DIR$/MediaPlayerModule" />
             <option value="$PROJECT_DIR$/MuseumBooking" />
+            <option value="$PROJECT_DIR$/Payment" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/muzlogreg" />
           </set>
