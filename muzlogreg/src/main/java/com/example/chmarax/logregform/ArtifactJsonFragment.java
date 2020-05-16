@@ -354,7 +354,7 @@ public class ArtifactJsonFragment extends Fragment implements TextToSpeech.OnIni
 
         JSONObject postdata = new JSONObject();
         try {
-            postdata.put("id", "500");
+            postdata.put("id", "1201");
             //  postdata.put("password", "12345");
         } catch (JSONException e) {
             // TODO Auto-generated catch block
@@ -392,7 +392,6 @@ public class ArtifactJsonFragment extends Fragment implements TextToSpeech.OnIni
                     for(int i = 0 ;i<len;i++){
                         images[i] = jsonArr.getString(i);
                     }
-
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -443,11 +442,6 @@ public class ArtifactJsonFragment extends Fragment implements TextToSpeech.OnIni
         viewPager = v.findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
         viewPager.setPadding(130, 0, 130, 0);
-
-        if( !viewPager.isActivated()) {
-            Toast.makeText(context1, "pager is activated", Toast.LENGTH_SHORT).show();
-        }
-
 
 
     }
