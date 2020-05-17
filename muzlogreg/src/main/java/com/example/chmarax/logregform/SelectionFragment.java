@@ -55,11 +55,11 @@ public class SelectionFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                MapsFragment fragment1 = new MapsFragment();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, fragment1);
-                fragmentTransaction.commit();
+//                MapsFragment fragment1 = new MapsFragment();
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.container, fragment1);
+//                fragmentTransaction.commit();
               //  Intent i = new Intent(getContext(), CustomMaps.class);
 //                startActivity(i);
 

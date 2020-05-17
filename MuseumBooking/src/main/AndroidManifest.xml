@@ -10,21 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".weather.WeatherActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
-        <activity
-            android:name=".shop.ShopActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/ShopTheme" />
-
-        <activity
-            android:theme="@style/GalleryTheme"
-            android:name=".gallery.GalleryActivity"/>
     </application>
 
 </manifest>

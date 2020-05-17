@@ -31,9 +31,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <meta-data
-        android:name="com.google.android.maps.v2.API_KEY"
-        android:value="AIzaSyAEl8efkA7expI6gqdH6Phbr13Aa92gHL0" />
-    <meta-data
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
 
@@ -55,16 +52,12 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MapsFragment"
-            android:label="@string/title_activity_maps_fragment"></activity>
-        <activity android:name=".RegistrationActivity" />
+
+
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".RegistrationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
