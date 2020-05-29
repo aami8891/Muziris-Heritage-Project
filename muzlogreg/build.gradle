@@ -41,6 +41,7 @@ dependencies {
     implementation project(path: ':MediaPlayerModule')
     implementation project(path: ':MuseumBooking')
     implementation project(path: ':Payment')
+    implementation project(path: ':translationModule')
 
 
 }

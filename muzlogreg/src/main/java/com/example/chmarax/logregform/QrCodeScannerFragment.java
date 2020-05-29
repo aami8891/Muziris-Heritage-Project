@@ -3,6 +3,7 @@ package com.example.chmarax.logregform;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -21,6 +22,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.apaar97.translate.TranslationActivity;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
@@ -143,10 +145,14 @@ public class QrCodeScannerFragment extends Fragment {
 //                                isEmail = false;
 //                                btnAction.setText("LAUNCH URL");
 
-                                        intentData = barcodes.valueAt(0).displayValue;
-                                        txtBarcodeValue.setText(intentData);
-                                        fragment1 = new ArtifactJsonFragment(intentData);
-                                        fragmentManager.beginTransaction().replace(R.id.container, fragment1).commit();
+//                                        intentData = barcodes.valueAt(0).displayValue;
+//                                        txtBarcodeValue.setText(intentData);
+//                                        fragment1 = new ArtifactJsonFragment(intentData);
+//                                        fragmentManager.beginTransaction().replace(R.id.container, fragment1).commit();
+
+                                Intent i = new Intent(getContext(), TranslationActivity.class);
+                                startActivity(i);
+
 
 
 
