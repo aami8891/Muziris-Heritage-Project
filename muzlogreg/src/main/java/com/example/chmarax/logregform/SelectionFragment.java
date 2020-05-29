@@ -15,6 +15,7 @@ import android.widget.Button;
 
 
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -60,8 +61,7 @@ public class SelectionFragment extends Fragment {
 //                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 //                fragmentTransaction.replace(R.id.container, fragment1);
 //                fragmentTransaction.commit();
-              //  Intent i = new Intent(getContext(), CustomMaps.class);
-//                startActivity(i);
+
 
             }
         });
