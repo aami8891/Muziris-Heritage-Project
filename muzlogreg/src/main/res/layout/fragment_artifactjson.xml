@@ -76,6 +76,6 @@
         android:clipToPadding="false"
         android:foregroundGravity="top|center"
         android:layoutMode="clipBounds"
-        android:overScrollMode="never"></androidx.viewpager.widget.ViewPager>
+        android:overScrollMode="never" />
 
 </RelativeLayout>

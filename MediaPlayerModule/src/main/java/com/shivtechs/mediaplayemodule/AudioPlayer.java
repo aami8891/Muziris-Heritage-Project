@@ -3,6 +3,7 @@ package com.shivtechs.mediaplayemodule;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
@@ -36,6 +37,9 @@ public class AudioPlayer {
         this.resourcePath = path;
         this.choice = choice;
         playAudio();
+    }
+
+    public AudioPlayer(View.OnClickListener onClickListener, String file_provider_name, boolean finishing, android.app.FragmentManager fragmentManager, String stringaudio, int modePath) {
     }
 
 
