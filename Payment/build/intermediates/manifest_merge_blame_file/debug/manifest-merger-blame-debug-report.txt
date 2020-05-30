@@ -1,0 +1,52 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.razorpay.sampleapp"
+4    android:versionCode="20"
+5    android:versionName="3.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+8-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:10:5-35:19
+12        android:icon="@mipmap/ic_launcher"
+12-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:11:9-43
+13        android:label="Razorpay Sample App"
+13-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:12:9-44
+14        android:theme="@style/AppTheme" >
+14-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:13:9-40
+15        <activity
+15-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:16:9-21:20
+16            android:name="com.razorpay.sampleapp.java.PaymentActivity"
+16-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:17:13-49
+17            android:label="Razorpay Sample App" >
+17-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:18:13-48
+18        </activity>
+19        <activity android:name="com.razorpay.sampleapp.kotlin.PaymentActivity" >
+19-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:22:9-27:20
+19-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:22:19-57
+20            <intent-filter>
+20-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:23:13-26:29
+21                <action android:name="android.intent.action.MAIN" />
+21-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:24:17-69
+21-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:24:25-66
+22
+23                <category android:name="android.intent.category.LAUNCHER" />
+23-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:25:17-77
+23-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:25:27-74
+24            </intent-filter>
+25        </activity>
+26
+27        <!-- Add your API key here -->
+28        <meta-data
+28-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:30:9-33:15
+29            android:name="com.razorpay.ApiKey"
+29-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:31:13-47
+30            android:value="rzp_live_ILgsfZCZoFIKMb" />
+30-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:32:13-52
+31    </application>
+32
+33</manifest>

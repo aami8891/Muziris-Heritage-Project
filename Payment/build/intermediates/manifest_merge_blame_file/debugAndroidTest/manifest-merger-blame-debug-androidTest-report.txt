@@ -1,0 +1,108 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.razorpay.sampleapp.test" >
+4
+5    <uses-sdk
+5-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:5:5-74
+6        android:minSdkVersion="22"
+6-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:5:15-41
+7        android:targetSdkVersion="29" />
+7-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:5:42-71
+8
+9    <instrumentation
+9-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:11:5-15:77
+10        android:name="android.test.InstrumentationTestRunner"
+10-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:11:22-75
+11        android:functionalTest="false"
+11-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:14:22-52
+12        android:handleProfiling="false"
+12-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:13:22-53
+13        android:label="Tests for com.razorpay.sampleapp.test"
+13-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:15:22-75
+14        android:targetPackage="com.razorpay.sampleapp.test" />
+14-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:12:22-73
+15
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:9:5-67
+16-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:9:22-64
+17
+18    <application
+18-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:7:5-9:19
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.2.0] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\8cdd499c3e1ec6f2c36a6dc7826c0651\core-1.2.0\AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+20-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:7:18-43
+21        android:icon="@mipmap/ic_launcher"
+21-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-43
+22        android:label="Razorpay Sample App"
+22-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-44
+23        android:theme="@style/AppTheme" >
+23-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-40
+24        <uses-library android:name="android.test.runner" />
+24-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:8:9-60
+24-->C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger8249498455296655000.xml:8:23-57
+25
+26        <activity
+26-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:9-18:20
+27            android:name="com.razorpay.sampleapp.java.PaymentActivity"
+27-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-71
+28            android:label="Razorpay Sample App" >
+28-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-48
+29        </activity>
+30        <activity android:name="com.razorpay.sampleapp.kotlin.PaymentActivity" >
+30-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-25:20
+30-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:19-79
+31            <intent-filter>
+31-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-24:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-69
+32-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:17-77
+34-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:27-74
+35            </intent-filter>
+36        </activity> <!-- Add your API key here -->
+37        <meta-data
+37-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:9-30:55
+38            android:name="com.razorpay.ApiKey"
+38-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-47
+39            android:value="rzp_live_ILgsfZCZoFIKMb" />
+39-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-52
+40
+41        <receiver android:name="com.razorpay.RzpTokenReceiver" >
+41-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:12:9-16:20
+41-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:12:19-63
+42            <intent-filter>
+42-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:13:13-15:29
+43                <action android:name="rzp.device_token.share" />
+43-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:14:17-65
+43-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:14:25-62
+44            </intent-filter>
+45        </receiver>
+46
+47        <activity
+47-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:18:9-29:20
+48            android:name="com.razorpay.CheckoutActivity"
+48-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:19:13-57
+49            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+49-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:20:13-83
+50            android:theme="@style/CheckoutTheme" >
+50-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:21:13-49
+51            <intent-filter>
+51-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:22:13-28:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:17-69
+52-->[__tested_artifact__::Payment] C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:25-66
+53
+54                <data
+54-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:25:17-27:47
+55                    android:host="rzp.io"
+55-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:26:21-42
+56                    android:scheme="io.rzp" />
+56-->[com.razorpay:checkout:1.5.16] C:\Users\Anish S\.gradle\caches\transforms-2\files-2.1\21e78db80f3d804a5eb9a9b475dbbe52\jetified-checkout-1.5.16\AndroidManifest.xml:27:21-44
+57            </intent-filter>
+58        </activity>
+59    </application>
+60
+61</manifest>
