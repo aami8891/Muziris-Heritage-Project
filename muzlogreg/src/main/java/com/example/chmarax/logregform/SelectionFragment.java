@@ -34,6 +34,7 @@ public class SelectionFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_selection, container, false);
         Button qrcodescanner = (Button) v.findViewById(R.id.btQrcodeScanner);
+        Button btComplte = (Button) v.findViewById(R.id.btComplete);
         Button gps = (Button) v.findViewById(R.id.btGps);
 
         qrcodescanner.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +46,20 @@ public class SelectionFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container, fragment1);
+                fragmentTransaction.commit();
+
+
+            }
+        });
+        btComplte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                CompleteArtifacts fragment2 = new CompleteArtifacts();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, fragment2);
                 fragmentTransaction.commit();
 
 
