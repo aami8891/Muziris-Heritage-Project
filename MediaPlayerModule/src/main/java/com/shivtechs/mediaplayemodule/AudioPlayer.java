@@ -20,7 +20,7 @@ public class AudioPlayer {
     public static  final  int MODE_PATH = 0;
     public static final int MODE_RESOURCE = 1;
     private String fileprovider = null;
-    public AudioPlayer(Activity activity,String fileprovider, boolean isFinishing,FragmentManager fragmentManager,String path,int choice){
+    public AudioPlayer(Activity activity, String fileprovider, boolean isFinishing, FragmentManager fragmentManager, String path, int choice){
         this.activity = activity;
         this.fragmentManager = fragmentManager;
         this.isFinishing = isFinishing;

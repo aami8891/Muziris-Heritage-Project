@@ -71,7 +71,7 @@ public class SelectionFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-//                MapsFragment fragment1 = new MapsFragment();
+//                ArtifactJsonFragment fragment1 = new ArtifactJsonFragment();
 //                FragmentManager fragmentManager = getFragmentManager();
 //                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 //                fragmentTransaction.replace(R.id.container, fragment1);

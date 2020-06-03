@@ -142,15 +142,13 @@ public class TranslationActivity extends AppCompatActivity implements TextToSpee
         itemIcon2.setImageDrawable(getResources().getDrawable(R.drawable.video)  );
         SubActionButton button3 = itemBuilder.setContentView(itemIcon2).build();
 
-        ImageView itemIcon3 = new ImageView(getBaseContext());
-        itemIcon2.setImageDrawable(getResources().getDrawable(R.drawable.imag)  );
-        SubActionButton button4 = itemBuilder.setContentView(itemIcon3).build();
+
 
         final FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
                 .addSubActionView(button1)
                 .addSubActionView(button2)
                 .addSubActionView(button3)
-                .addSubActionView(button4)
+
 
                 .attachTo(actionButton)
                 .build();
@@ -164,7 +162,7 @@ public class TranslationActivity extends AppCompatActivity implements TextToSpee
                 String FILE_PROVIDER_NAME = "com.shivtechs.provider" ;
                 //For playing the audio file from the given path
                 stringaudio = "https://mangoess.000webhostapp.com/MangoFolder/Njandukalude%20Naattil%20Oridavela%20_%20Enthaavo%20Song%20Vid%20-%20128K%20MP3.mp3";
-                AudioPlayer player2 = new AudioPlayer(this,FILE_PROVIDER_NAME,getParent().isFinishing(),getParent().getFragmentManager(),stringaudio,MODE_PATH);
+                AudioPlayer player2 = new AudioPlayer(TranslationActivity.this,FILE_PROVIDER_NAME,isFinishing(),getSupportFragmentManager(),stringaudio,MODE_PATH);
                 //For playing the audio file from the android resource
                 //    AudioPlayer player = new AudioPlayer(getActivity(),getActivity().isFinishing(),getActivity().getSupportFragmentManager(),R.raw.guitar,MODE_RESOURCE);
 
@@ -192,20 +190,7 @@ public class TranslationActivity extends AppCompatActivity implements TextToSpee
         button3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(),"Video Files",Toast.LENGTH_SHORT).show();
-                actionMenu.close(true);
-            }
-
-
-
-
-
-        });
-
-        button4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getBaseContext(),"Video Files",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"Extra Images",Toast.LENGTH_SHORT).show();
                 new Thread(new Runnable() {
                     public void run() {
                         getMoreImagePostMethod();
@@ -214,7 +199,13 @@ public class TranslationActivity extends AppCompatActivity implements TextToSpee
                 }).start();
                 actionMenu.close(true);
             }
+
+
+
+
+
         });
+
 
 
 
@@ -609,7 +600,7 @@ public class TranslationActivity extends AppCompatActivity implements TextToSpee
 
         JSONObject postdata = new JSONObject();
         try {
-            postdata.put("id", "1201");
+            postdata.put("id", "1251");
             //  postdata.put("password", "12345");
         } catch (JSONException e) {
             // TODO Auto-generated catch block
