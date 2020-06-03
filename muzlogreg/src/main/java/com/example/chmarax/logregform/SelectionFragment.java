@@ -71,11 +71,11 @@ public class SelectionFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-//                ArtifactJsonFragment fragment1 = new ArtifactJsonFragment();
-//                FragmentManager fragmentManager = getFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                fragmentTransaction.replace(R.id.container, fragment1);
-//                fragmentTransaction.commit();
+                LiveStreamingQR fragment1 = new LiveStreamingQR();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, fragment1);
+                fragmentTransaction.commit();
 
 
             }
