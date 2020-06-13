@@ -3,9 +3,6 @@ package com.example.chmarax.logregform;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.ContextWrapper;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -30,17 +27,13 @@ import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
 import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 import com.shivtechs.mediaplayemodule.AudioPlayer;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -54,7 +47,6 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 import static com.shivtechs.mediaplayemodule.AudioPlayer.MODE_PATH;
-import static com.shivtechs.mediaplayemodule.AudioPlayer.MODE_RESOURCE;
 
 
 /**

@@ -67,7 +67,7 @@
         android:layout_marginTop="32dp"
         android:background="#581F1D1B"
         android:backgroundTint="#E2E61515"
-        android:text="GPS"
+        android:text="Live Streaming"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
