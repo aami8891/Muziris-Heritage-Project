@@ -46,9 +46,11 @@
     <Button
         android:id="@+id/btinside"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="50dp"
-        android:background="#AEEA00"
+        android:layout_marginRight="16dp"
+        android:background="#7EE61515"
         android:padding="10dp"
         android:text="View all Artifacts"
         android:textStyle="bold"
