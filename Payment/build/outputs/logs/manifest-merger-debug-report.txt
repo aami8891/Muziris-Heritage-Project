@@ -1,71 +1,71 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:2:1-37:12
 	package
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:4:5-37
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:4:5-37
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:6:5-30
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:6:5-30
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:3:5-63
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:3:5-63
 	android:versionCode
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:5:5-29
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:5:5-29
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:10:5-35:19
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:10:5-35:19
 	android:label
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:12:9-44
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:12:9-44
 	android:icon
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:13:9-40
 activity#com.razorpay.sampleapp.java.PaymentActivity
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:16:9-21:20
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:16:9-21:20
 	android:label
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:18:13-48
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:18:13-48
 	android:name
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:17:13-49
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:17:13-49
 activity#com.razorpay.sampleapp.kotlin.PaymentActivity
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:22:9-27:20
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:22:9-27:20
 	android:name
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:22:19-57
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:22:19-57
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:23:13-26:29
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:25:27-74
 meta-data#com.razorpay.ApiKey
-ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:30:9-33:15
+ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:30:9-33:15
 	android:value
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:32:13-52
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:32:13-52
 	android:name
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml:31:13-47
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml:31:13-47
 uses-sdk
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Anish S\AndroidStudioProjects\MuzirisHeritageProject\Payment\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Lenovo\AndroidStudioProjects\Muziris-Heritage-Project\Payment\src\main\AndroidManifest.xml
