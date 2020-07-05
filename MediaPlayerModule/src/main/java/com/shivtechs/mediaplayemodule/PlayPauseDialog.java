@@ -13,12 +13,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.FileProvider;
 import androidx.fragment.app.DialogFragment;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-
-import java.io.File;
 
 import static com.shivtechs.mediaplayemodule.AudioPlayer.MODE_PATH;
 
@@ -43,7 +40,9 @@ public class PlayPauseDialog extends DialogFragment {
     private void seekUpdation() {
 
         if (mediaPlayer != null) {
-            play_pause_seekbar.setProgress(mediaPlayer.getCurrentPosition());
+        //    play_pause_seekbar.setProgress(32321);
+           play_pause_seekbar.setProgress(mediaPlayer.getCurrentPosition());
+        //    mediaPlayer.seekTo(8343);
         }
 
         if (play_pause_seekbar.getProgress() == play_pause_seekbar.getMax()) {
@@ -88,12 +87,14 @@ public class PlayPauseDialog extends DialogFragment {
         View layout = dialog.getCustomView();
         recordBtn = layout.findViewById(R.id.recording_button);
         play_pause_seekbar = layout.findViewById(R.id.recording_seekbar);
+    //    play_pause_seekbar.setProgress();
       //  Uri audio = Uri.parse("https://mangoess.000webhostapp.com/MangoFolder/Njandukalude%20Naattil%20Oridavela%20_%20Enthaavo%20Song%20Vid%20-%20128K%20MP3.mp3");
         if (choice == MODE_PATH) mediaPlayer = MediaPlayer.create(getContext(), audioUri1);
         else {
             try {
 
                 mediaPlayer = MediaPlayer.create(getContext(),resourcePath);//resourcePath
+
             } catch (Exception e) {
                 Toast.makeText(getContext(), "The provided resource file doesn't exist", Toast.LENGTH_SHORT).show();
             }
@@ -110,7 +111,9 @@ public class PlayPauseDialog extends DialogFragment {
             int progress = savedInstanceState.getInt("progress");
             audioRecordFlag = savedInstanceState.getBoolean("audioRecordFlag");
             if (mediaPlayer != null) {
-                mediaPlayer.seekTo(progress);
+
+            //
+
             }
             play_pause_seekbar.setProgress(progress);
         }
@@ -132,6 +135,7 @@ public class PlayPauseDialog extends DialogFragment {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
+
             }
 
             @Override
@@ -140,6 +144,8 @@ public class PlayPauseDialog extends DialogFragment {
                     mediaPlayer.seekTo(seekBar.getProgress());
 
                     if (!mediaPlayer.isPlaying() && mediaPlayer.getCurrentPosition() != mediaPlayer.getDuration()) {
+
+                      //  play_pause_seekbar.setProgress(86000);
                         mediaPlayer.start();
                         recordBtn.setImageResource(R.drawable.ic_pause_black_24dp);
                         audioRecordFlag = true;
@@ -154,6 +160,7 @@ public class PlayPauseDialog extends DialogFragment {
                 if (mediaPlayer != null) {
                     if (!audioRecordFlag) {
                         //play the audio
+
                         mediaPlayer.start();
                         recordBtn.setImageResource(R.drawable.ic_pause_black_24dp);
                         audioRecordFlag = true;

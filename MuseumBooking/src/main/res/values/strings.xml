@@ -3,7 +3,10 @@
 
     <string name="card_title_preview">Preview</string>
     <string name="card_title_credits">Credits</string>
+    <string name="map_key" translatable="false" >
+        AIzaSyDGDfVoLojwCvFxnn7ap1cMCk_pQVBphWs
 
+    </string>
     <string name="preview_title_big_cards">Big cards</string>
     <string name="preview_title_small_cards">Small cards</string>
     <string name="preview_title_vertical">Vertical scroll</string>

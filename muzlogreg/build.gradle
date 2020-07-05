@@ -2,6 +2,9 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
+    aaptOptions {
+        cruncherEnabled = false
+    }
     defaultConfig {
         applicationId "com.example.chmarax.logregform"
         minSdkVersion 22
@@ -10,8 +13,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
+            crunchPngs false // or true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

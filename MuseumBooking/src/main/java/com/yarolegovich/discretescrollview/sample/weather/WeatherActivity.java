@@ -10,8 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
+import com.yarolegovich.discretescrollview.sample.MuzMap;
 import com.yarolegovich.discretescrollview.sample.R;
 import com.yarolegovich.discretescrollview.sample.DiscreteScrollViewOptions;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
@@ -26,7 +29,7 @@ public class WeatherActivity extends Fragment implements
         DiscreteScrollView.ScrollStateChangeListener<ForecastAdapter.ViewHolder>,
         DiscreteScrollView.OnItemChangedListener<ForecastAdapter.ViewHolder>,
         View.OnClickListener {
-
+    Fragment selectedFragment = null;
     private List<Forecast> forecasts;
 
     private ForecastView forecastView;
@@ -46,7 +49,7 @@ public class WeatherActivity extends Fragment implements
         View v =  inflater.inflate(R.layout.activity_weather, container, false);
 
         forecastView = (ForecastView) v.findViewById(R.id.forecast_view);
-
+        selectedFragment = new MuzMap();
         forecasts = WeatherStation.get().getForecasts();
         cityPicker = (DiscreteScrollView) v.findViewById(R.id.forecast_city_picker);
         cityPicker.setSlideOnFling(true);
@@ -75,6 +78,10 @@ public class WeatherActivity extends Fragment implements
             forecastView.setForecast(forecasts.get(position));
             holder.showText();
         }
+        if (position == 5){
+
+            getFragmentManager().beginTransaction().replace(R.id.linearlayout2,selectedFragment).commit();
+        }
     }
 
     @Override
@@ -93,6 +100,7 @@ public class WeatherActivity extends Fragment implements
             Forecast next = forecasts.get(newIndex);
             forecastView.onScroll(1f - Math.abs(position), current, next);
         }
+
     }
 
     @Override
@@ -111,6 +119,14 @@ public class WeatherActivity extends Fragment implements
 
     @Override
     public void onScrollEnd(@NonNull ForecastAdapter.ViewHolder holder, int position) {
+        if(position != 5){
+            FragmentManager manager = getFragmentManager();
+            FragmentTransaction transaction = manager.beginTransaction();
+            manager.getBackStackEntryCount();
+            transaction.remove(selectedFragment);
+            transaction.commit();
 
+
+        }
     }
 }

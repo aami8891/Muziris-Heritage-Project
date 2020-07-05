@@ -21,11 +21,11 @@ public class WeatherStation {
 
     public List<Forecast> getForecasts() {
         return Arrays.asList(
-                new Forecast("Pisa", R.drawable.pisa, "16", Weather.PARTLY_CLOUDY),
-                new Forecast("Paris", R.drawable.paris, "14", Weather.CLEAR),
-                new Forecast("New York", R.drawable.new_york, "9", Weather.MOSTLY_CLOUDY),
-                new Forecast("Rome", R.drawable.rome, "18", Weather.PARTLY_CLOUDY),
-                new Forecast("London", R.drawable.london, "6", Weather.PERIODIC_CLOUDS),
-                new Forecast("Washington", R.drawable.washington, "20", Weather.CLEAR));
+                new Forecast("Museum 1", R.drawable.pisa, "NAPIER MUSEUM, THIRUVANANTHAPURAM", Weather.CLOUDY),
+                new Forecast("Museum 2", R.drawable.paris, "MUSEUM OF KERALA ARTS AND HISTORY, KOCHI", Weather.CLEAR),
+                new Forecast("Museum 3", R.drawable.new_york, "ARCHAEOLOGICAL MUSEUM THRISSUR", Weather.MOSTLY_CLOUDY),
+                new Forecast("Museum 4", R.drawable.rome, "KUTHIRAMALIKA PALACE MUSEUM, THIRUVANANTHAPURAM", Weather.PARTLY_CLOUDY),
+                new Forecast("Museum 5", R.drawable.london, "HILL PALACE", Weather.PERIODIC_CLOUDS),
+                new Forecast("MAP", R.drawable.washington, "MUSEUM OF KERALA ARTS AND HISTORY, KOCHI", Weather.CLEAR));
     }
 }
